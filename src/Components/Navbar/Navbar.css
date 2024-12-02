@@ -1,0 +1,61 @@
+nav{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logo-nav img{
+    width: 15vh;
+}
+
+.log-nav{
+    gap: 20px; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;  
+}
+
+.login button{
+    color: white;
+    background-color: black;
+    border:1px solid black;
+    cursor: pointer;
+    width: 90px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+
+}
+
+
+
+.signup button{
+    color:black ;
+    background-color: white;
+    border: 1px solid black !important;
+    cursor: pointer;
+    width: 90px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+}
+
+.login button:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    transition: 0.5s;
+}
+
+.signup button:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    transition: 0.5s;
+}

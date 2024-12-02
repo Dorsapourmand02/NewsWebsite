@@ -1,0 +1,13 @@
+.header ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.header ul li:hover{
+    height: 25px;
+    border-bottom: 1px solid black;
+}
