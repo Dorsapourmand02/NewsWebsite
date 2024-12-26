@@ -20,8 +20,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Header/>
     <Carousel/>
     <News/> */}
-    {/* <Sigunup/> */}
-    <Login/>
+    <Sigunup/>
+    {/* <Login/> */}
     <Footer/>
 
   </StrictMode>,
