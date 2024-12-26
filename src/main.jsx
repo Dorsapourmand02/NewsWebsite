@@ -9,15 +9,19 @@ import Footer from './Components/Footer/Footer.jsx'
 import News from './Components/Newspart/News.jsx'
 // import Login from './Components/Login/Login.jsx'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Sigunup from './Components/Signup/Signup.jsx'
+import Login from './Components/Login/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
 
     
   <StrictMode>
     <Navbar/>
-    <Header/>
+    {/* <Header/>
     <Carousel/>
-    <News/>
+    <News/> */}
+    {/* <Sigunup/> */}
+    <Login/>
     <Footer/>
 
   </StrictMode>,
