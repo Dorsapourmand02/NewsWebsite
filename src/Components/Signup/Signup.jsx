@@ -2,55 +2,51 @@ import React, { useState } from "react";
 import "./Signup.css";
 
 function Signup() {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = async () => {
-    const userData = { name, password };
+  const [name, setName] = useState("");
 
-    try {
-        const response = await fetch("http://localhost/user.php", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(userData),
-          });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      const result = await response.json();
-      if (result.success) {
-        alert("User added successfully!");
-      } else {
-        alert("Error: " + result.message);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    const userData = { email, password, name };
+
+    const response = await fetch("http://localhost/signup.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(userData),
+    });
+
+    const data = await response.text();
+    console.log(data); // بررسی پاسخ از سرور
   };
 
   return (
-    <div className="signup-container">
-      <div className="list-container">
-        <h3>Sign Up</h3>
-        <ul>
-          <li>
-            <span>Name</span>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </li>
-          <li>
-            <span>Password</span>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </li>
-          <button className="SUbtn" onClick={handleSubmit}>Done</button>
-        </ul>
-      </div>
+    <div className="Signup_container">
+      <form className="list-container" onSubmit={handleSubmit}>
+        <h3>Sign up</h3>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <button className="SUbtn" type="submit">Sign Up</button>
+      </form>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.signup-container{
+.Signup_container{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -18,32 +18,13 @@
     border-radius: 10px;
     width: 300px;
     height: 300px;
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
 }
-
-.list-container ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; */
-    list-style: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-right: 30px;
-}
-
-.list-container ul li {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 5px;
- 
-}
-
 
 .SUbtn{
     border: none;
@@ -54,9 +35,11 @@
     height: 30px;
     margin-top: 20px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .SUbtn:hover{
     color: black;
     background-color: white;
+    border: 1px solid black;
 }
