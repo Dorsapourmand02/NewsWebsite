@@ -1,8 +1,8 @@
 import React from "react";
 import "./News.css";
-import marspic from "/Users/dori/Desktop/News website/src/assets/mars.jpg";
-import footballpic from "/Users/dori/Desktop/News website/src/assets/football.webp";
-import politicpic from "/Users/dori/Desktop/News website/src/assets/tramp.webp";
+import marspic from "/src/assets/mars.jpg";
+import footballpic from "/src/assets/football.webp";
+import politicpic from "/src/assets/tramp.webp";
 
 function News() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logofooter from "/Users/dori/Desktop/News website/src/assets/MWN_White.png"
+import logofooter from "/src/assets/MWN_White.png"
 
 function Footer() {
   return (
